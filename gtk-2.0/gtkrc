@@ -1,0 +1,202 @@
+#
+# Theme: cde-unix
+#
+# This theme is a modification to the Xfce-stellar theme in order to look as close as
+# possible to the default CDE theme.
+#
+
+#
+# Style Definitions
+#
+style "default"
+{
+    GtkButton::default_border         = {5, 5, 5, 5}
+    GtkButton::default_outside_border = {6, 6, 6, 6}
+    GtkButton::default_spacing        = 5
+    GtkButton::focus-padding          = 0
+    GtkCheckButton::indicator_size    = 15
+    GtkRadioButton::indicator_size    = 15
+    GtkMenuItem::selected_shadow_type = in
+    GtkPaned::handle_full_size        = 1
+    GtkRange::slider_width            = 12
+    GtkRange::stepper_size            = 12
+    GtkRange::stepper_spacing         = 0
+    GtkRange::trough_border           = 0
+    GtkScrollbar::min_slider_length   = 20
+    GtkWidget::focus-line-pattern     = "\0"
+    GtkWidget::focus-line-width       = 2
+    GtkWidget::interior_focus         = 0
+    GtkWidget::internal-padding       = 2
+
+    ExoIconBar::active-item-border-color = "#F0A96F"
+    ExoIconBar::active-item-fill-color   = "#eda870"
+    ExoIconBar::active-item-text-color   = "#ffffff"
+
+    ExoIconBar::cursor-item-border-color = "#000000"
+    ExoIconBar::cursor-item-border-color = "#707481"
+    ExoIconBar::cursor-item-fill-color   = "#c6b2a8"
+    ExoIconBar::cursor-item-text-color   = "#ffffff"
+
+    xthickness = 1
+    ythickness = 1
+
+    fg[NORMAL]       = "#000000"
+    fg[ACTIVE]       = "#000000"
+    fg[PRELIGHT]     = "#000000"
+    fg[SELECTED]     = "#eda870"
+    fg[INSENSITIVE]  = "#4e4f56" 
+
+    bg[NORMAL]       = "#c6b2a8"
+    bg[ACTIVE]       = "#c6b2a8"
+    bg[PRELIGHT]     = "#c6b2a8"
+    bg[SELECTED]     = "#eda870"
+    bg[INSENSITIVE]  = "#c6b2a8"
+
+    base[NORMAL]     = "#a8988f"
+    base[SELECTED]   = "#eda870"
+    base[ACTIVE]     = "#a8988f"
+    base[PRELIGHT]   = "#a8988f"
+    base[INSENSITIVE]= "#4992a7"
+
+    text[INSENSITIVE]= "#747474"
+    text[NORMAL]     = "#181614"
+    text[ACTIVE]     = "#181614"
+    text[PRELIGHT]   = "#181614"
+    text[SELECTED]   = "#181614"
+
+    engine "xfce"
+    {
+        grip_style = none
+        smooth_edge = true
+    }
+}
+
+style "menu" = "default"
+{
+    bg[NORMAL]       = "#4992a7" 
+
+    fg[NORMAL]       = "#ffffff"
+    fg[SELECTED]     = "#ffffff"
+    fg[PRELIGHT]     = "#ffffff"
+    fg[ACTIVE]       = "#ffffff"
+    fg[INSENSITIVE]  = "#1f3e47" 
+
+    text[NORMAL]      = "#ffffff"
+    text[SELECTED]    = "#ffffff"
+    text[PRELIGHT]    = "#ffffff"
+    text[ACTIVE]      = "#ffffff"
+    text[INSENSITIVE] = "#1f3e47"
+
+}
+
+style "menu_bar" = "default"
+{
+    bg[NORMAL]        = "#4992a7"
+    bg[SELECTED]      = "#4992a7"
+    bg[PRELIGHT]      = "#4992a7"
+    bg[ACTIVE]        = "#4992a7"
+    bg[INSENSITIVE]   = "#4992a7" 
+
+    fg[NORMAL]        = "#ffffff"
+    fg[SELECTED]      = "#ffffff"
+    fg[PRELIGHT]      = "#ffffff"
+    fg[ACTIVE]        = "#ffffff"
+    fg[INSENSITIVE]   = "#1f3e47" 
+
+    text[NORMAL]      = "#ffffff"
+    text[SELECTED]    = "#ffffff"
+    text[PRELIGHT]    = "#ffffff"
+    text[ACTIVE]      = "#ffffff"
+    text[INSENSITIVE] = "#1f3e47"
+}
+
+style "menu_item" = "default"
+{
+    bg[NORMAL]        = "#366d7c"
+    bg[SELECTED]      = "#366d7c"
+    bg[PRELIGHT]      = "#366d7c"
+    bg[ACTIVE]        = "#366d7c"
+    bg[INSENSITIVE]   = "#366d7c"
+
+    fg[NORMAL]        = "#ffffff"
+    fg[SELECTED]      = "#ffffff"
+    fg[ACTIVE]        = "#ffffff"
+    fg[PRELIGHT]      = "#ffffff"
+    fg[INSENSITIVE]   = "#1f3e47"
+    
+    text[NORMAL]      = "#ffffff"
+    text[SELECTED]    = "#ffffff"
+    text[ACTIVE]      = "#ffffff"
+    text[PRELIGHT]    = "#ffffff"
+    text[INSENSITIVE] = "#1f3e47"
+
+    base[NORMAL]      = "#ffffff"
+}
+
+style "textbox" = "default"
+{
+    bg[NORMAL]        = "#686f82"
+    bg[SELECTED]      = "#686f82"
+    bg[ACTIVE]        = "#686f82"
+    bg[PRELIGHT]      = "#686f82"
+    bg[INSENSITIVE]   = "#686f82"
+
+    base[NORMAL]      = "#686f82"
+    base[SELECTED]    = "#ffffff"
+    base[ACTIVE]      = "#686f82"
+    base[PRELIGHT]    = "#686f82"
+    base[INSENSITIVE] = "#686f82"
+
+    fg[NORMAL]        = "#686f82"
+    fg[SELECTED]      = "#686f82"
+    fg[PRELIGHT]      = "#686f82"
+    fg[ACTIVE]        = "#686f82"
+    
+    text[NORMAL]      = "#ffffff"
+    text[SELECTED]    = "#686f82"
+    text[PRELIGHT]    = "#686f82" 
+}
+
+#
+# Style assignments
+#
+class "GtkWidget"    style "default"
+class "GtkMenu*"     style "menu"
+class "GtkMenuBar*"  style "menu_bar"
+class "GtkMenuItem*" style "menu_item"
+
+widget_class "*<GtkMenu>*"     style "menu"
+widget_class "*<GtkMenuBar>*"  style "menu_bar"
+widget_class "*<GtkMenuItem>*" style "menu_item"
+
+class "GtkEntry"       style "textbox"
+class "GtkTextView"    style "textbox"
+class "GtkOldEditable" style "textbox" 
+
+widget_class "*.<GtkTextView>.*" style "notebook"
+widget_class "*.<GtkEntry>.*" style "notebook"
+
+#
+# This is for ROX-Filer
+# 
+style "rox" = "default"
+{
+  bg[NORMAL] = "#111111"
+  bg[ACTIVE] = "#ffffff"
+}
+widget_class "*Collection" style "rox"
+
+#
+# This is for the window borders (xfwm4 & metacity)
+# 
+style "titlebar" = "default"
+{
+    bg[SELECTED]      = "#eda870"
+    fg[SELECTED]      = "#ffffff"
+    bg[INSENSITIVE]   = "#999999"
+    fg[INSENSITIVE]   = "#000000"
+}
+
+widget "xfwm"	          style "titlebar"
+class "MetaFrames"        style "titlebar"
+widget_class "MetaFrames" style "titlebar"

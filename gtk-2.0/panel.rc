@@ -1,0 +1,8 @@
+# Make sure panel text color doesn't change
+widget_class "*Panel*MenuBar*"      style "menu_bar"
+widget_class "*Panel*<GtkMenuBar>*" style "menu_bar"
+widget "*.clock-applet-button.*"    style "default"
+widget "*PanelApplet*"              style "default"
+
+widget "*Xfce*Panel*"               style "menu_bar"
+class "*Xfce*Panel*"                style "menu_bar"
